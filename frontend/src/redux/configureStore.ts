@@ -15,8 +15,9 @@ export function configureAppStore() {
       }).prepend(rejectedErrorHandlerMiddleware.middleware),
     devTools:
       /* istanbul ignore next line */
-      process.env.NODE_ENV !== 'production' ||
-      process.env.PUBLIC_URL.length > 0,
+      // process.env.NODE_ENV !== 'production' ||
+      // process.env.PUBLIC_URL.length > 0,
+      process.env.NODE_ENV !== 'production',
     enhancers,
   });
 

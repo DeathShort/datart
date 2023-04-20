@@ -16,7 +16,7 @@
  * limitations under the License.
  */
 import { message } from 'antd';
-import { DownloadFileType } from 'app/constants';
+import {DownloadFileType, PUBLIC_URL} from 'app/constants';
 import {
   DownloadTask,
   DownloadTaskState,
@@ -250,7 +250,7 @@ export async function downloadFile(id) {
 
 export async function fetchPluginChart(path) {
   const result = await request2(path, {
-    baseURL: '/',
+    baseURL: PUBLIC_URL,
     headers: { Accept: 'application/javascript' },
   }).catch(error => {
     console.error(error);

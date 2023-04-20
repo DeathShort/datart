@@ -24,6 +24,7 @@ export enum TenantManagementMode {
   Platform = 'PLATFORM',
 }
 
+export const PUBLIC_URL = process.env.PUBLIC_URL;
 export enum ControllerFacadeTypes {
   DropdownList = 'dropdownList',
   MultiDropdownList = 'multiDropdownList',

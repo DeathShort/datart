@@ -38,6 +38,7 @@ import { LazyRegisterPage } from './pages/RegisterPage/Loadable';
 import { LazySetupPage } from './pages/SetupPage/Loadable';
 import { useAppSlice } from './slice';
 import { getSystemInfo, logout, setLoggedInUser } from './slice/thunks';
+import {PUBLIC_URL} from "./constants";
 
 registerTheme('default', echartsDefaultTheme);
 
@@ -65,7 +66,7 @@ export function AppRouter() {
 
   return (
     <ConfigProvider locale={antdLocales[i18n.language]}>
-      <BrowserRouter>
+      <BrowserRouter basename={PUBLIC_URL}>
         <Helmet
           titleTemplate="%s - 数据分析平台"
           defaultTitle="数据分析平台"
