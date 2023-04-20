@@ -10,3 +10,8 @@
 
 *.iml
 *.zip
+*.tar
+ojdbc8-10.2.0.4.0.jar
+*.bat
+/logs
+.vscode
